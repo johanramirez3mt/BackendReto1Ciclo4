@@ -41,7 +41,7 @@ public class userService {
         Optional<User> usuario = userRepository.validaEmailPassword(email, password);
 
         if(usuario.isEmpty()){
-            return new User(email, password, "No definido");
+            return new User(email, password, "NO DEFINIDO");
         }else {
             return usuario.get();
         }
